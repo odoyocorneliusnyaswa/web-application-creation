@@ -1,0 +1,356 @@
+/* About Page Styles */
+
+
+/* Page Banner */
+
+.page-banner {
+    background: linear-gradient(rgba(14, 76, 146, 0.8), rgba(14, 76, 146, 0.8)), url('../images/about-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Our Story Section */
+
+.our-story {
+    padding: 80px 0;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.story-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+
+/* Mission & Vision Section */
+
+.mission-vision {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.mission-box,
+.vision-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.mission-box .icon-container,
+.vision-box .icon-container {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.mission-box .icon-container i,
+.vision-box .icon-container i {
+    font-size: 2rem;
+}
+
+.mission-box h2,
+.vision-box h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.mission-box p,
+.vision-box p {
+    line-height: 1.8;
+}
+
+
+/* Core Values Section */
+
+.core-values {
+    padding: 80px 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.value-icon i {
+    font-size: 1.8rem;
+}
+
+.value-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    line-height: 1.7;
+}
+
+
+/* Leadership Team Section */
+
+.leadership {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.leader-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.leader-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.leader-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.leader-card:hover .leader-image img {
+    transform: scale(1.05);
+}
+
+.leader-details {
+    padding: 20px;
+}
+
+.leader-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.leader-title {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.leader-bio {
+    line-height: 1.7;
+}
+
+
+/* Achievements Section */
+
+.achievements {
+    padding: 80px 0;
+}
+
+.achievements-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.achievements-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat-item {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+}
+
+.achievements-timeline h3 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-year {
+    position: absolute;
+    left: -50px;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-left: 20px;
+}
+
+.timeline-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+
+/* Testimonials Section */
+
+.testimonials {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 992px) {
+    .story-grid,
+    .mission-vision-grid,
+    .achievements-content {
+        grid-template-columns: 1fr;
+    }
+    .story-image {
+        order: -1;
+    }
+    .achievements-stats {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        padding: 60px 0;
+    }
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+    .timeline-year {
+        position: relative;
+        left: 0;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    .timeline-content {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .achievements-stats {
+        grid-template-columns: 1fr;
+    }
+}

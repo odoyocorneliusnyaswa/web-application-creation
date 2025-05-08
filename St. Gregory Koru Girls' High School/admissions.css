@@ -1,0 +1,577 @@
+/* Admissions Page Styles */
+
+
+/* Page Banner */
+
+.page-banner {
+    background: linear-gradient(rgba(20, 79, 58, 0.8), rgba(20, 79, 58, 0.8)), url('../images/admissions-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Section Header */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-top: -15px;
+}
+
+
+/* Admissions Overview Section */
+
+.admissions-overview {
+    padding: 80px 0;
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.overview-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.overview-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+
+/* Admissions Process Section */
+
+.admissions-process {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.process-steps {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.step-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.step-item:last-child {
+    margin-bottom: 0;
+}
+
+.step-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 35px;
+    height: calc(100% - 20px);
+    width: 2px;
+    background-color: var(--primary-color);
+}
+
+.step-number {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.step-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    flex: 1;
+}
+
+.step-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.step-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.step-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.step-content li {
+    margin-bottom: 8px;
+}
+
+.step-content .btn {
+    margin-top: 10px;
+}
+
+
+/* Requirements Section */
+
+.requirements {
+    padding: 80px 0;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.requirement-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    height: 100%;
+}
+
+.requirement-icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(20, 79, 58, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+}
+
+.requirement-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.requirement-card ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.requirement-card li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.requirement-card p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* Fees Section */
+
+.fees {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.fees-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.fees-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.fees-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.fees-table th,
+.fees-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.fees-table th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.fees-table tr:last-child td {
+    border-bottom: none;
+}
+
+.fees-table tr:nth-child(even) {
+    background-color: rgba(20, 79, 58, 0.05);
+}
+
+.fees-notes {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.fees-notes h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.fees-notes ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.fees-notes li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+
+/* Scholarships Section */
+
+.scholarships {
+    padding: 80px 0;
+}
+
+.scholarships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.scholarship-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.scholarship-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.scholarship-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.scholarship-header h3 {
+    margin-bottom: 5px;
+}
+
+.scholarship-content {
+    padding: 20px;
+}
+
+.scholarship-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.scholarship-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.scholarship-content li {
+    margin-bottom: 8px;
+}
+
+.scholarship-footer {
+    padding: 15px 20px;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+
+/* FAQ Section */
+
+.faq {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.faq-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.accordion {
+    margin-bottom: 20px;
+}
+
+.accordion-item {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+}
+
+.accordion-header {
+    padding: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.accordion-header h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.accordion-icon {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.accordion-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content-inner {
+    padding: 0 0 20px;
+    line-height: 1.7;
+}
+
+.accordion-item.active .accordion-header {
+    background-color: rgba(20, 79, 58, 0.05);
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 500px;
+}
+
+
+/* Contact Section */
+
+.contact-section {
+    padding: 80px 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-info {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(20, 79, 58, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-text h4 {
+    margin-bottom: 5px;
+}
+
+.contact-text p,
+.contact-text a {
+    color: #666;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-form h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(20, 79, 58, 0.1);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+
+/* Call to Action Section */
+
+.cta {
+    padding: 80px 0;
+    background: linear-gradient(rgba(20, 79, 58, 0.9), rgba(20, 79, 58, 0.9)), url('../images/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text);
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 992px) {
+    .overview-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    .step-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .step-item:not(:last-child)::after {
+        left: 35px;
+        top: 70px;
+        height: 30px;
+    }
+    .step-number {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .fees-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

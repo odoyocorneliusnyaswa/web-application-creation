@@ -1,0 +1,537 @@
+/* About Page Styles */
+
+
+/* Page Banner */
+
+.page-banner {
+    background: linear-gradient(rgba(136, 9, 51, 0.8), rgba(31, 17, 221, 0.8)), url('../images/about-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* History Section */
+
+.history {
+    padding: 80px 0;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.history-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.history-image {
+    text-align: center;
+}
+
+.history-image img {
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 10px;
+}
+
+.image-caption {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.timeline h3 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    width: 50%;
+    padding: 0 40px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-year {
+    position: absolute;
+    top: 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.timeline-item:nth-child(odd) .timeline-year {
+    right: -20px;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+    left: -20px;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.timeline-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+
+/* Mission & Vision Section */
+
+.mission-vision {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.mission-box,
+.vision-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.mission-box .icon-container,
+.vision-box .icon-container {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.mission-box .icon-container i,
+.vision-box .icon-container i {
+    font-size: 2rem;
+}
+
+.mission-box h2,
+.vision-box h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.mission-box p,
+.vision-box p {
+    line-height: 1.8;
+}
+
+
+/* Core Values Section */
+
+.core-values {
+    padding: 80px 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.value-icon i {
+    font-size: 1.8rem;
+}
+
+.value-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    line-height: 1.7;
+}
+
+
+/* Principal's Message Section */
+
+.principal-message {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.message-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.principal-image img {
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    width: 100%;
+}
+
+.message-text p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.principal-signature {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.principal-title {
+    font-style: italic;
+}
+
+
+/* School Leadership Section */
+
+.leadership {
+    padding: 80px 0;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.leader-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.leader-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.leader-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.leader-card:hover .leader-image img {
+    transform: scale(1.05);
+}
+
+.leader-details {
+    padding: 20px;
+}
+
+.leader-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.leader-title {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.leader-bio {
+    line-height: 1.7;
+}
+
+
+/* Achievements Section */
+
+.achievements {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.achievements-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.achievements-text p {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.achievement-categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.achievement-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.achievement-category ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.achievement-category li {
+    margin-bottom: 10px;
+}
+
+.achievements-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+}
+
+
+/* Alumni Section */
+
+.alumni {
+    padding: 80px 0;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.alumni-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.alumni-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.alumni-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.alumni-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.alumni-card:hover .alumni-image img {
+    transform: scale(1.05);
+}
+
+.alumni-details {
+    padding: 20px;
+}
+
+.alumni-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.alumni-class {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.alumni-profession {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.alumni-bio {
+    line-height: 1.7;
+}
+
+.alumni-cta {
+    text-align: center;
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.alumni-cta p {
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 992px) {
+    .history-content,
+    .mission-vision-grid,
+    .message-content,
+    .achievements-content {
+        grid-template-columns: 1fr;
+    }
+    .history-image {
+        order: -1;
+    }
+    .timeline-container::before {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0;
+    }
+    .timeline-item:nth-child(odd) {
+        text-align: left;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    .timeline-item:nth-child(odd) .timeline-year,
+    .timeline-item:nth-child(even) .timeline-year {
+        left: 0;
+        right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        padding: 60px 0;
+    }
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+    .achievements-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .values-grid,
+    .leadership-grid,
+    .alumni-grid {
+        grid-template-columns: 1fr;
+    }
+}

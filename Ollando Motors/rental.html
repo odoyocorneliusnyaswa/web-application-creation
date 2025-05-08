@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental - AutoHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rental.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <script src="rental.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="AutoHub Logo" class="logo">
+                <h1>AutoHub</h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="buy.html">Buy Cars</a></li>
+                    <li><a href="sell.html">Sell Your Car</a></li>
+                    <li><a href="rental.html" class="active">Car Rental</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html" class="btn-account"><i class="fas fa-user"></i> Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="banner-content">
+                <h1>Car Rental Services</h1>
+                <p>Flexible rental options for any occasion</p>
+            </div>
+        </section>
+
+        <!-- Rental Search Section -->
+        <section class="rental-search">
+            <div class="container">
+                <div class="search-container">
+                    <h2>Find Your Perfect Rental Car</h2>
+                    <form id="rentalSearchForm" class="rental-search-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pickupLocation">Pickup Location</label>
+                                <select id="pickupLocation" name="pickupLocation" required>
+                                    <option value="" disabled selected>Select Location</option>
+                                    <option value="mombasa">Mombasa</option>
+                                    <option value="nairobi">Nairobi</option>
+                                    <option value="kisumu">Kisumu</option>
+                                    <option value="eldoret">Eldoret</option>
+                                    <option value="nakuru">Nakuru</option>
+                                    <option value="thika">Thika</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dropoffLocation">Drop-off Location</label>
+                                <select id="dropoffLocation" name="dropoffLocation">
+                                    <option value="" disabled selected>Same as Pickup</option>
+                                    <option value="mombasa">Mombasa/option>
+                                    <option value="nairobi">Nairobi</option>
+                                    <option value="kisumu">Kisumu</option>
+                                    <option value="eldoret">Eldoret</option>
+                                    <option value="nakuru">Nakuru</option>
+                                    <option value="thika">Thika</option>
+                                </select>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="sameLocation" name="sameLocation" checked>
+                                    <label for="sameLocation">Same as pickup</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pickupDate">Pickup Date</label>
+                                <input type="date" id="pickupDate" name="pickupDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pickupTime">Pickup Time</label>
+                                <select id="pickupTime" name="pickupTime" required>
+                                    <option value="" disabled selected>Select Time</option>
+                                    <option value="08:00">8:00 AM</option>
+                                    <option value="08:30">8:30 AM</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="09:30">9:30 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="10:30">10:30 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="11:30">11:30 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="12:30">12:30 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="13:30">1:30 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="14:30">2:30 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="15:30">3:30 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="16:30">4:30 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="17:30">5:30 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dropoffDate">Drop-off Date</label>
+                                <input type="date" id="dropoffDate" name="dropoffDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dropoffTime">Drop-off Time</label>
+                                <select id="dropoffTime" name="dropoffTime" required>
+                                    <option value="" disabled selected>Select Time</option>
+                                    <option value="08:00">8:00 AM</option>
+                                    <option value="08:30">8:30 AM</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="09:30">9:30 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="10:30">10:30 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="11:30">11:30 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="12:30">12:30 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="13:30">1:30 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="14:30">2:30 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="15:30">3:30 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="16:30">4:30 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="17:30">5:30 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="carType">Vehicle Type</label>
+                                <select id="carType" name="carType">
+                                    <option value="all">All Types</option>
+                                    <option value="economy">Economy</option>
+                                    <option value="compact">Compact</option>
+                                    <option value="midsize">Midsize</option>
+                                    <option value="fullsize">Full Size</option>
+                                    <option value="suv">SUV</option>
+                                    <option value="luxury">Luxury</option>
+                                    <option value="convertible">Convertible</option>
+                                    <option value="van">Van/Minivan</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-search">
+                                    <i class="fas fa-search"></i> Search Available Cars
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Available Cars Section -->
+        <section class="available-cars">
+            <div class="container">
+                <h2 class="section-title">Available Rental Cars</h2>
+
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label>Sort By:</label>
+                        <select id="sortBy">
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="size-asc">Size: Small to Large</option>
+                            <option value="size-desc">Size: Large to Small</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Filter:</label>
+                        <div class="filter-options">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="economy">Economy</button>
+                            <button class="filter-btn" data-filter="suv">SUV</button>
+                            <button class="filter-btn" data-filter="luxury">Luxury</button>
+                            <button class="filter-btn" data-filter="special">Special</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cars-grid">
+                    <!-- Economy Cars -->
+                    <div class="car-card" data-category="economy">
+                        <div class="car-image">
+                            <img src="images/rental-economy1.jpg" alt="Toyota Corolla">
+                            <span class="car-tag">Economy</span>
+                        </div>
+                        <div class="car-details">
+                            <h3>Toyota Corolla or similar</h3>
+                            <div class="car-features">
+                                <span><i class="fas fa-user"></i> 5 Seats</span>
+                                <span><i class="fas fa-suitcase"></i> 2 Bags</span>
+                                <span><i class="fas fa-cog"></i> Automatic</span>
+                                <span><i class="fas fa-snowflake"></i> A/C</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price-details">
+                                    <span class="price">$45<span class="period">/day</span></span>
+                                    <span class="total-price">$135 total for 3 days</span>
+                                </div>
+                                <button class="btn btn-primary btn-book" data-car="Toyota Corolla">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-category="economy">
+                        <div class="car-image">
+                            <img src="images/rental-economy2.jpg" alt="Nissan Versa">
+                            <span class="car-tag">Economy</span>
+                        </div>
+                        <div class="car-details">
+                            <h3>Nissan Versa or similar</h3>
+                            <div class="car-features">
+                                <span><i class="fas fa-user"></i> 5 Seats</span>
+                                <span><i class="fas fa-suitcase"></i> 2 Bags</span>
+                                <span><i class="fas fa-cog"></i> Automatic</span>
+                                <span><i class="fas fa-snowflake"></i> A/C</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price-details">
+                                    <span class="price">$42<span class="period">/day</span></span>
+                                    <span class="total-price">$126 total for 3 days</span>
+                                </div>
+                                <button class="btn btn-primary btn-book" data-car="Nissan Versa">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUV Cars -->
+                    <div class="car-card" data-category="suv">
+                        <div class="car-image">
+                            <img src="images/rental-suv1.jpg" alt="Honda CR-V">
+                            <span class="car-tag">SUV</span>
+                        </div>
+                        <div class="car-details">
+                            <h3>Honda CR-V or similar</h3>
+                            <div class="car-features">
+                                <span><i class="fas fa-user"></i> 5 Seats</span>
+                                <span><i class="fas fa-suitcase"></i> 4 Bags</span>
+                                <span><i class="fas fa-cog"></i> Automatic</span>
+                                <span><i class="fas fa-snowflake"></i> A/C</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price-details">
+                                    <span class="price">$65<span class="period">/day</span></span>
+                                    <span class="total-price">$195 total for 3 days</span>
+                                </div>
+                                <button class="btn btn-primary btn-book" data-car="Honda CR-V">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-category="suv">
+                        <div class="car-image">
+                            <img src="images/rental-suv2.jpg" alt="Toyota RAV4">
+                            <span class="car-tag">SUV</span>
+                        </div>
+                        <div class="car-details">
+                            <h3>Toyota RAV4 or similar</h3>
+                            <div class="car-features">
+                                <span><i class="fas fa-user"></i> 5 Seats</span>
+                                <span><i class="fas fa-suitcase"></i> 4 Bags</span>
+                                <span><i class="fas fa-cog"></i> Automatic</span>
+                                <span><i class="fas fa-snowflake"></i> A/C</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price-details">
+                                    <span class="price">$68<span class="period">/day</span></span>
+                                    <span class="total-price">$204 total for 3 days</span>
+                                </div>
+                                <button class="btn btn-primary btn-book" data-car="Toyota RAV4">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Luxury Cars -->
+                    <div class="car-card" data-category="luxury">
+                        <div class="car-image">
+                            <img src="images/rental-luxury1.jpg" alt="Mercedes C-Class">
+                            <span class="car-tag">Luxury</span>
+                        </div>
+                        <div class="car-details">
+                            <h3>Mercedes C-Class or similar</h3>
+                            <div class="car-features">
+                                <span><i class="fas fa-user"></i> 5 Seats</span>
+                                <span><i class="fas fa-suitcase"></i> 3 Bags</span>
+                                <span><i class="fas fa-cog"></i> Automatic</span>
+                                <span><i class="fas fa-snowflake"></i> A/C</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price-details">
+                                    <span class="price">$95<span class="period">/day</span></span>
+                                    <span class="total-price">$285 total for 3 days</span>
+                                </div>
+                                <button class="btn btn-primary btn-book" data-car="Mercedes C-Class">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-category="luxury">
+                        <div class="car-image">
+                            <img src="images/rental-luxury2.jpg" alt="BMW 3 Series">
+                            <span class="car-tag">Luxury</span>
+                        </div>
+                        <div class="car-details">
+                            <h3>BMW 3 Series or similar</h3>
+                            <div class="car-features">
+                                <span><i class="fas fa-user"></i> 5 Seats</span>
+                                <span><i class="fas fa-suitcase"></i> 3 Bags</span>
+                                <span><i class="fas fa-cog"></i> Automatic</span>
+                                <span><i class="fas fa-snowflake"></i> A/C</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price-details">
+                                    <span class="price">$92<span class="period">/day</span></span>
+                                    <span class="total-price">$276 total for 3 days</span>
+                                </div>
+                                <button class="btn btn-primary btn-book" data-car="BMW 3 Series">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Cars -->
+                    <div class="car-card" data-category="special">
+                        <div class="car-image">
+                            <img src="images/rental-special1.jpg" alt="Ford Mustang Convertible">
+                            <span class="car-tag">Special</span>
+                        </div>
+                        <div class="car-details">
+                            <h3>Ford Mustang Convertible</h3>
+                            <div class="car-features">
+                                <span><i class="fas fa-user"></i> 4 Seats</span>
+                                <span><i class="fas fa-suitcase"></i> 2 Bags</span>
+                                <span><i class="fas fa-cog"></i> Automatic</span>
+                                <span><i class="fas fa-snowflake"></i> A/C</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price-details">
+                                    <span class="price">$120<span class="period">/day</span></span>
+                                    <span class="total-price">$360 total for 3 days</span>
+                                </div>
+                                <button class="btn btn-primary btn-book" data-car="Ford Mustang Convertible">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-category="special">
+                        <div class="car-image">
+                            <img src="images/rental-special2.jpg" alt="Chevrolet Camaro">
+                            <span class="car-tag">Special</span>
+                        </div>
+                        <div class="car-details">
+                            <h3>Chevrolet Camaro or similar</h3>
+                            <div class="car-features">
+                                <span><i class="fas fa-user"></i> 4 Seats</span>
+                                <span><i class="fas fa-suitcase"></i> 2 Bags</span>
+                                <span><i class="fas fa-cog"></i> Automatic</span>
+                                <span><i class="fas fa-snowflake"></i> A/C</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price-details">
+                                    <span class="price">$115<span class="period">/day</span></span>
+                                    <span class="total-price">$345 total for 3 days</span>
+                                </div>
+                                <button class="btn btn-primary btn-book" data-car="Chevrolet Camaro">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rental Process Section -->
+        <section class="rental-process">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Search & Select</h3>
+                        <p>Choose your pickup location, dates, and browse available vehicles.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Book & Pay</h3>
+                        <p>Reserve your car with our secure payment system.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Pickup</h3>
+                        <p>Show your license and credit card at our rental location.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <h3>Return</h3>
+                        <p>Drop off the car at the designated location with a full tank.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rental Packages Section -->
+        <section class="rental-packages">
+            <div class="container">
+                <h2 class="section-title">Rental Packages</h2>
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>Weekend Getaway</h3>
+                            <p class="package-price">From $99</p>
+                        </div>
+                        <div class="package-content">
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 3-day weekend rental (Fri-Mon)</li>
+                                <li><i class="fas fa-check"></i> Economy or Compact car</li>
+                                <li><i class="fas fa-check"></i> 450 miles included</li>
+                                <li><i class="fas fa-check"></i> Free cancellation up to 24 hours</li>
+                                <li><i class="fas fa-check"></i> Additional driver included</li>
+                            </ul>
+                            <button class="btn btn-secondary">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="package-card featured">
+                        <div class="package-badge">Popular</div>
+                        <div class="package-header">
+                            <h3>Weekly Explorer</h3>
+                            <p class="package-price">From $299</p>
+                        </div>
+                        <div class="package-content">
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 7-day rental</li>
+                                <li><i class="fas fa-check"></i> Midsize car or Small SUV</li>
+                                <li><i class="fas fa-check"></i> 1,500 miles included</li>
+                                <li><i class="fas fa-check"></i> Free cancellation up to 48 hours</li>
+                                <li><i class="fas fa-check"></i> GPS navigation included</li>
+                                <li><i class="fas fa-check"></i> Additional driver included</li>
+                                <li><i class="fas fa-check"></i> 10% off your next rental</li>
+                            </ul>
+                            <button class="btn btn-secondary">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>Business Traveler</h3>
+                            <p class="package-price">From $199</p>
+                        </div>
+                        <div class="package-content">
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 5-day rental (Mon-Fri)</li>
+                                <li><i class="fas fa-check"></i> Midsize or Full-size car</li>
+                                <li><i class="fas fa-check"></i> 750 miles included</li>
+                                <li><i class="fas fa-check"></i> Free cancellation up to 24 hours</li>
+                                <li><i class="fas fa-check"></i> Priority pickup and return</li>
+                                <li><i class="fas fa-check"></i> Wi-Fi hotspot included</li>
+                            </ul>
+                            <button class="btn btn-secondary">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Services Section -->
+        <section class="additional-services">
+            <div class="container">
+                <h2 class="section-title">Additional Services</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Insurance Options</h3>
+                            <p>Choose from our comprehensive insurance packages for peace of mind during your rental period.</p>
+                            <ul>
+                                <li>Collision Damage Waiver (CDW)</li>
+                                <li>Supplemental Liability Insurance</li>
+                                <li>Personal Accident Insurance</li>
+                                <li>Roadside Assistance</li>
+                                </ul

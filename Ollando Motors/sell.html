@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Car - Ollando Motors Ke</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sell.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <script src="sell.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Ollando Motors Logo" class="logo">
+                <h1>OLLANDO MOTORS KENYA</h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="buy.html">Buy Cars</a></li>
+                    <li><a href="sell.html" class="active">Sell Your Car</a></li>
+                    <li><a href="rental.html">Car Rental</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html" class="btn-account"><i class="fas fa-user"></i> Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="banner-content">
+                <h1>Sell Your Car</h1>
+                <p>List your vehicle and reach thousands of potential buyers</p>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Create Your Listing</h3>
+                        <p>Fill out the form with your vehicle details and upload photos.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Get Verified</h3>
+                        <p>Our team reviews your listing to ensure quality and accuracy.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Connect with Buyers</h3>
+                        <p>Receive inquiries and communicate with potential buyers.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Complete the Sale</h3>
+                        <p>Finalize the transaction and transfer ownership safely.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sell Your Car Form Section -->
+        <section class="sell-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <h2>List Your Vehicle</h2>
+                    <p class="form-intro">Please provide accurate information about your vehicle to create an effective listing.</p>
+
+                    <form id="sellCarForm" class="sell-car-form">
+                        <div class="form-progress">
+                            <div class="progress-step active" data-step="1">Vehicle Details</div>
+                            <div class="progress-step" data-step="2">Features & Condition</div>
+                            <div class="progress-step" data-step="3">Photos & Pricing</div>
+                            <div class="progress-step" data-step="4">Contact Information</div>
+                        </div>
+
+                        <!-- Step 1: Vehicle Details -->
+                        <div class="form-step active" data-step="1">
+                            <h3>Vehicle Details</h3>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="make">Make*</label>
+                                    <select id="make" name="make" required>
+                                        <option value="" disabled selected>Select Make</option>
+                                        <option value="Toyota">Toyota</option>
+                                        <option value="Honda">Honda</option>
+                                        <option value="Ford">Ford</option>
+                                        <option value="Chevrolet">Chevrolet</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Mercedes">Mercedes-Benz</option>
+                                        <option value="Audi">Audi</option>
+                                        <option value="Nissan">Nissan</option>
+                                        <option value="Hyundai">Hyundai</option>
+                                        <option value="Kia">Kia</option>
+                                        <option value="Tesla">Tesla</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="model">Model*</label>
+                                    <input type="text" id="model" name="model" placeholder="e.g. Camry, Civic, F-150" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="year">Year*</label>
+                                    <select id="year" name="year" required>
+                                        <option value="" disabled selected>Select Year</option>
+                                        <!-- JavaScript will populate years -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="trim">Trim/Version</label>
+                                    <input type="text" id="trim" name="trim" placeholder="e.g. SE, EX, Limited">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bodyType">Body Type*</label>
+                                    <select id="bodyType" name="bodyType" required>
+                                        <option value="" disabled selected>Select Body Type</option>
+                                        <option value="Sedan">Sedan</option>
+                                        <option value="SUV">SUV</option>
+                                        <option value="Truck">Truck</option>
+                                        <option value="Coupe">Coupe</option>
+                                        <option value="Convertible">Convertible</option>
+                                        <option value="Hatchback">Hatchback</option>
+                                        <option value="Wagon">Wagon</option>
+                                        <option value="Van">Van</option>
+                                        <option value="Minivan">Minivan</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mileage">Mileage (miles)*</label>
+                                    <input type="number" id="mileage" name="mileage" min="0" placeholder="e.g. 45000" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="transmission">Transmission*</label>
+                                    <select id="transmission" name="transmission" required>
+                                        <option value="" disabled selected>Select Transmission</option>
+                                        <option value="Automatic">Automatic</option>
+                                        <option value="Manual">Manual</option>
+                                        <option value="CVT">CVT</option>
+                                        <option value="Semi-Automatic">Semi-Automatic</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fuelType">Fuel Type*</label>
+                                    <select id="fuelType" name="fuelType" required>
+                                        <option value="" disabled selected>Select Fuel Type</option>
+                                        <option value="Gasoline">Gasoline</option>
+                                        <option value="Diesel">Diesel</option>
+                                        <option value="Hybrid">Hybrid</option>
+                                        <option value="Electric">Electric</option>
+                                        <option value="Plug-in Hybrid">Plug-in Hybrid</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="exteriorColor">Exterior Color*</label>
+                                    <input type="text" id="exteriorColor" name="exteriorColor" placeholder="e.g. Black, Silver, White" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="interiorColor">Interior Color*</label>
+                                    <input type="text" id="interiorColor" name="interiorColor" placeholder="e.g. Black, Tan, Gray" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="vin">VIN (Vehicle Identification Number)</label>
+                                    <input type="text" id="vin" name="vin" placeholder="e.g. 1HGCM82633A004352">
+                                    <small>Providing your VIN helps verify your vehicle's history.</small>
+                                </div>
+                            </div>
+
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-primary next-step">Continue</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Features & Condition -->
+                        <div class="form-step" data-step="2">
+                            <h3>Features & Condition</h3>
+
+                            <div class="form-group">
+                                <label>Features (Select all that apply)</label>
+                                <div class="features-grid">
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-ac" name="features" value="Air Conditioning">
+                                        <label for="feature-ac">Air Conditioning</label>
+                                    </div>
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-power-windows" name="features" value="Power Windows">
+                                        <label for="feature-power-windows">Power Windows</label>
+                                    </div>
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-power-locks" name="features" value="Power Locks">
+                                        <label for="feature-power-locks">Power Locks</label>
+                                    </div>
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-cruise" name="features" value="Cruise Control">
+                                        <label for="feature-cruise">Cruise Control</label>
+                                    </div>
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-navigation" name="features" value="Navigation System">
+                                        <label for="feature-navigation">Navigation System</label>
+                                    </div>
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-bluetooth" name="features" value="Bluetooth">
+                                        <label for="feature-bluetooth">Bluetooth</label>
+                                    </div>
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-backup-camera" name="features" value="Backup Camera">
+                                        <label for="feature-backup-camera">Backup Camera</label>
+                                    </div>
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-sunroof" name="features" value="Sunroof/Moonroof">
+                                        <label for="feature-sunroof">Sunroof/Moonroof</label>
+                                    </div>
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-leather" name="features" value="Leather Seats">
+                                        <label for="feature-leather">Leather Seats</label>
+                                    </div>
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-heated-seats" name="features" value="Heated Seats">
+                                        <label for="feature-heated-seats">Heated Seats</label>
+                                    </div>
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-third-row" name="features" value="Third Row Seating">
+                                        <label for="feature-third-row">Third Row Seating</label>
+                                    </div>
+                                    <div class="feature-checkbox">
+                                        <input type="checkbox" id="feature-alloy" name="features" value="Alloy Wheels">
+                                        <label for="feature-alloy">Alloy Wheels</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="condition">Overall Condition*</label>
+                                <select id="condition" name="condition" required>
+                                    <option value="" disabled selected>Select Condition</option>
+                                    <option value="Excellent">Excellent - Like new</option>
+                                    <option value="Very Good">Very Good - Minor wear and tear</option>
+                                    <option value="Good">Good - Normal wear for age and mileage</option>
+                                    <option value="Fair">Fair - Some mechanical or cosmetic issues</option>
+                                    <option value="Poor">Poor - Significant issues, may need repairs</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Vehicle Description*</label>
+                                <textarea id="description" name="description" rows="5" placeholder="Describe your vehicle's condition, history, and any additional features or issues." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Title Status*</label>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="title-clean" name="titleStatus" value="Clean" required>
+                                        <label for="title-clean">Clean Title</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="title-salvage" name="titleStatus" value="Salvage">
+                                        <label for="title-salvage">Salvage Title</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="title-rebuilt" name="titleStatus" value="Rebuilt">
+                                        <label for="title-rebuilt">Rebuilt Title</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="title-other" name="titleStatus" value="Other">
+                                        <label for="title-other">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Number of Previous Owners*</label>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="owners-1" name="previousOwners" value="1" required>
+                                        <label for="owners-1">1 (First Owner)</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="owners-2" name="previousOwners" value="2">
+                                        <label for="owners-2">2</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="owners-3" name="previousOwners" value="3">
+                                        <label for="owners-3">3</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="owners-4plus" name="previousOwners" value="4+">
+                                        <label for="owners-4plus">4 or more</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-outline prev-step">Back</button>
+                                <button type="button" class="btn btn-primary next-step">Continue</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Photos & Pricing -->
+                        <div class="form-step" data-step="3">
+                            <h3>Photos & Pricing</h3>
+
+                            <div class="form-group">
+                                <label for="photos">Vehicle Photos*</label>
+                                <div class="photo-upload-container">
+                                    <div class="photo-upload-area" id="photoUploadArea">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <p>Drag & drop photos here or click to browse</p>
+                                        <small>Upload at least 5 photos (max 15). Include exterior (front, back, sides), interior, and any damage.</small>
+                                        <input type="file" id="photos" name="photos" accept="image/*" multiple required>
+                                    </div>
+                                    <div class="photo-preview" id="photoPreview"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="price">Asking Price ($)*</label>
+                                    <input type="number" id="price" name="price" min="1" placeholder="e.g. 15000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="negotiable">Price Negotiable?</label>
+                                    <select id="negotiable" name="negotiable">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="Slightly">Slightly</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="listingDuration">Listing Duration</label>
+                                <select id="listingDuration" name="listingDuration">
+                                    <option value="30">30 days (Free)</option>
+                                    <option value="60">60 days ($15)</option>
+                                    <option value="90">90 days ($25)</option>
+                                    <option value="until-sold">Until Sold ($40)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Listing Enhancements</label>
+                                <div class="enhancement-options">
+                                    <div class="enhancement-option">
+                                        <input type="checkbox" id="enhancement-featured" name="enhancements" value="Featured">
+                                        <label for="enhancement-featured">
+                                            <span class="enhancement-name">Featured Listing</span>
+                                            <span class="enhancement-price">$15</span>
+                                            <span class="enhancement-desc">Your listing appears at the top of search results</span>
+                                        </label>
+                                    </div>
+                                    <div class="enhancement-option">
+                                        <input type="checkbox" id="enhancement-highlight" name="enhancements" value="Highlight">
+                                        <label for="enhancement-highlight">
+                                            <span class="enhancement-name">Highlighted Listing</span>
+                                            <span class="enhancement-price">$10</span>
+                                            <span class="enhancement-desc">Your listing stands out with a colored background</span>
+                                        </label>
+                                    </div>
+                                    <div class="enhancement-option">
+                                        <input type="checkbox" id="enhancement-premium" name="enhancements" value="Premium">
+                                        <label for="enhancement-premium">
+                                            <span class="enhancement-name">Premium Package</span>
+                                            <span class="enhancement-price">$30</span>
+                                            <span class="enhancement-desc">Includes Featured + Highlighted + Social Media Promotion</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-outline prev-step">Back</button>
+                                <button type="button" class="btn btn-primary next-step">Continue</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Contact Information -->
+                        <div class="form-step" data-step="4">
+                            <h3>Contact Information</h3>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name*</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name*</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address*</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number*</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">Location*</label>
+                                <input type="text" id="location" name="location" placeholder="City, State" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Preferred Contact Method*</label>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="contact-email" name="contactMethod" value="Email" required>
+                                        <label for="contact-email">Email</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="contact-phone" name="contactMethod" value="Phone">
+                                        <label for="contact-phone">Phone</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="contact-both" name="contactMethod" value="Both">
+                                        <label for="contact-both">Both</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>*</label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Subscribe to our newsletter for updates and promotions</label>
+                            </div>
+
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-outline prev-step">Back</button>
+                                <button type="submit" class="btn btn-primary">Submit Listing</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="sidebar">
+                    <div class="sidebar-section pricing">
+                        <h3>Listing Packages</h3>
+                        <div class="package">
+                            <h4>Basic</h4>
+                            <p class="package-price">Free</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> 30-day listing</li>
+                                <li><i class="fas fa-check"></i> Up to 10 photos</li>
+                                <li><i class="fas fa-check"></i> Basic search visibility</li>
+                                <li><i class="fas fa-times"></i> Featured placement</li>
+                            </ul>
+                        </div>
+                        <div class="package featured">
+                            <div class="package-badge">Popular</div>
+                            <h4>Premium</h4>
+                            <p class="package-price">$30</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> 60-day listing</li>
+                                <li><i class="fas fa-check"></i> Up to 20 photos</li>
+                                <li><i class="fas fa-check"></i> Featured in search results</li>
+                                <li><i class="fas fa-check"></i> Social media promotion</li>
+                                <li><i class="fas fa-check"></i> Highlighted listing</li>
+                            </ul>
+                        </div>
+                        <div class="package">
+                            <h4>Ultimate</h4>
+                            <p class="package-price">$50</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Until sold (no expiration)</li>
+                                <li><i class="fas fa-check"></i> Unlimited photos</li>
+                                <li><i class="fas fa-check"></i> Top placement in search</li>
+                                <li><i class="fas fa-check"></i> Featured on homepage</li>
+                                <li><i class="fas fa-check"></i> Detailed analytics</li>
+                                <li><i class="fas fa-check"></i> Priority support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section tips">
+                        <h3>Tips for Selling Quickly</h3>
+                        <ul>
+                            <li><i class="fas fa-camera"></i> <strong>Quality Photos:</strong> Clear, well-lit photos from multiple angles increase interest.</li>
+                            <li><i class="fas fa-info-circle"></i> <strong>Detailed Description:</strong> Be honest and thorough about your vehicle's condition.</li>
+                            <li><i class="fas fa-tag"></i> <strong>Fair Pricing:</strong> Research market values to set a competitive price.</li>
+                            <li><i class="fas fa-history"></i> <strong>Service History:</strong> Providing maintenance records builds buyer confidence.</li>
+                            <li><i class="fas fa-comments"></i> <strong>Quick Responses:</strong> Respond promptly to inquiries to maintain buyer interest.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Success Stories</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <div class="quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>I listed my Honda Accord on AutoHub and sold it within a week! The process was straightforward and the support team was very helpful.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="author">
+                            <img src="images/seller1.jpg" alt="Car Seller">
+                            <div>
+                                <h4>Jennifer Adams</h4>
+                                <p>Sold: 2018 Honda Accord</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>AutoHub made selling my truck easy. I received multiple offers and got more than I expected. Will definitely use again in the future!</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="author">
+                            <img src="images/seller2.jpg" alt="Car Seller">
+                            <div>
+                                <h4>Robert Johnson</h4>
+                                <p>Sold: 2016 Ford F-150</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>As a first-time seller, I was nervous about the process. AutoHub guided me through each step and I sold my car at a fair price with no hassle.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="author">
+                            <img src="images/seller3.jpg" alt="Car Seller">
+                            <div>
+                                <h4>Maria Garcia</h4>
+                                <p>Sold: 2019 Toyota RAV4</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-controls">
+                        <button class="prev-testimonial" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                        <div class="testimonial-indicators">
+                            <span class="indicator active" data-testimonial="0"></span>
+                            <span class="indicator" data-testimonial="1"></span>
+                            <span class="indicator" data-testimonial="2"></span>
+                        </div>
+                        <button class="next-testimonial" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How much does it cost to list my car?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Basic listings are free for 30 days. We also offer premium packages starting at $30 that include enhanced visibility, longer listing duration, and additional features to help sell your car faster.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long will it take to sell my car?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Selling time varies based on factors like vehicle condition, price, demand, and location. Well-priced vehicles with good photos and descriptions typically sell within 2-3 weeks. Premium listings often sell faster due to increased
+                                visibility.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is my personal information secure?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we take privacy seriously. Your contact information is only shared with serious buyers through our secure messaging system. You control how and when potential buyers can contact you.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I edit my listing after it's published?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can edit your listing details, add or remove photos, and adjust the price at any time through your account dashboard. Keeping your listing updated with accurate information can help attract more buyers.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I handle the transaction safely?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We recommend meeting in a public place for test drives, verifying the buyer's identity, accepting secure payment methods (cashier's check, bank transfer, or cash), and properly transferring the title and registration. Our support
+                                team can provide guidance throughout the process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo.png" alt="AutoHub Logo" class="footer-logo">
+                    <h3>AutoHub</h3>
+                    <p>Your one-stop destination for buying, selling, and renting cars. We're committed to providing exceptional automotive services.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="buy.html">Buy Cars</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="rental.html">Car Rental</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="support.html">Support Center</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Automotive Lane, Car City, CC 12345</p>
+                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@autohub.com">info@autohub.com</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoHub. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Elite Football Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/programs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Elite Football Academy Logo" class="logo">
+                <h1>Elite Football Academy</h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html" class="active">Programs</a></li>
+                    <li><a href="coaches.html">Coaches</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html" class="btn-register">Register Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="banner-content">
+                <h1>Our Programs</h1>
+                <p>Comprehensive training programs for all ages and skill levels</p>
+            </div>
+        </section>
+
+        <!-- Programs Overview Section -->
+        <section class="programs-overview">
+            <div class="container">
+                <h2 class="section-title">Training Programs</h2>
+                <p class="section-intro">At Elite Football Academy, we offer a range of programs designed to develop players at every stage of their football journey. Our structured curriculum ensures progressive skill development, tactical understanding, and physical conditioning
+                    appropriate for each age group.</p>
+
+                <div class="program-filters">
+                    <button class="filter-btn active" data-filter="all">All Programs</button>
+                    <button class="filter-btn" data-filter="youth">Youth (6-12)</button>
+                    <button class="filter-btn" data-filter="teen">Teen (13-16)</button>
+                    <button class="filter-btn" data-filter="performance">Performance (17-21)</button>
+                    <button class="filter-btn" data-filter="specialized">Specialized</button>
+                </div>
+
+                <div class="programs-grid">
+                    <!-- Youth Development Program -->
+                    <div class="program-item" data-category="youth" id="youth">
+                        <div class="program-image">
+                            <img src="images/program-youth.jpg" alt="Youth Development Program">
+                            <span class="age-group">Ages 6-12</span>
+                        </div>
+                        <div class="program-content">
+                            <h3>Youth Development Program</h3>
+                            <p class="program-description">Building fundamental skills and fostering a love for the game in a fun, engaging environment. Our youth program focuses on developing technical abilities, basic tactical concepts, and physical literacy through age-appropriate
+                                activities and small-sided games.</p>
+
+                            <div class="program-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <div>
+                                        <h4>Schedule</h4>
+                                        <p>2-3 sessions per week, 60-90 minutes each</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <h4>Group Size</h4>
+                                        <p>Maximum 12 players per coach</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <h4>Focus Areas</h4>
+                                        <p>Technical foundations, motor skills, game understanding, teamwork</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="program-curriculum">
+                                <h4>Curriculum Highlights</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Ball mastery and control</li>
+                                    <li><i class="fas fa-check"></i> Passing and receiving techniques</li>
+                                    <li><i class="fas fa-check"></i> Dribbling and 1v1 skills</li>
+                                    <li><i class="fas fa-check"></i> Basic shooting mechanics</li>
+                                    <li><i class="fas fa-check"></i> Small-sided games (3v3, 4v4, 5v5)</li>
+                                    <li><i class="fas fa-check"></i> Introduction to positions and roles</li>
+                                </ul>
+                            </div>
+
+                            <a href="register.html?program=youth" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Teen Elite Program -->
+                    <div class="program-item" data-category="teen" id="teen">
+                        <div class="program-image">
+                            <img src="images/program-teen.jpg" alt="Teen Elite Program">
+                            <span class="age-group">Ages 13-16</span>
+                        </div>
+                        <div class="program-content">
+                            <h3>Teen Elite Program</h3>
+                            <p class="program-description">Advanced training for talented players looking to take their game to the next level. This program builds on technical foundations while introducing more complex tactical concepts, position-specific training, and increased physical
+                                demands.
+                            </p>
+
+                            <div class="program-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <div>
+                                        <h4>Schedule</h4>
+                                        <p>3-4 sessions per week, 90-120 minutes each</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <h4>Group Size</h4>
+                                        <p>Maximum 16 players per coach</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <h4>Focus Areas</h4>
+                                        <p>Technical refinement, tactical awareness, physical development, competitive mentality</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="program-curriculum">
+                                <h4>Curriculum Highlights</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Advanced technical skills under pressure</li>
+                                    <li><i class="fas fa-check"></i> Position-specific training</li>
+                                    <li><i class="fas fa-check"></i> Tactical principles of attack and defense</li>
+                                    <li><i class="fas fa-check"></i> Game analysis and decision-making</li>
+                                    <li><i class="fas fa-check"></i> Strength and conditioning</li>
+                                    <li><i class="fas fa-check"></i> Competitive matches and tournaments</li>
+                                </ul>
+                            </div>
+
+                            <a href="register.html?program=teen" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Performance Academy -->
+                    <div class="program-item" data-category="performance" id="performance">
+                        <div class="program-image">
+                            <img src="images/program-performance.jpg" alt="Performance Academy">
+                            <span class="age-group">Ages 17-21</span>
+                        </div>
+                        <div class="program-content">
+                            <h3>Performance Academy</h3>
+                            <p class="program-description">Professional preparation program with pathways to college scholarships and pro contracts. This elite program focuses on high-performance training, advanced tactical understanding, and competitive exposure to prepare players
+                                for the next level.</p>
+
+                            <div class="program-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <div>
+                                        <h4>Schedule</h4>
+                                        <p>4-5 sessions per week, 90-120 minutes each</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <h4>Group Size</h4>
+                                        <p>Maximum 18 players per coach</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <h4>Focus Areas</h4>
+                                        <p>Elite technical/tactical development, physical optimization, mental performance, professional preparation</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="program-curriculum">
+                                <h4>Curriculum Highlights</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> High-intensity technical training</li>
+                                    <li><i class="fas fa-check"></i> Advanced tactical systems and strategies</li>
+                                    <li><i class="fas fa-check"></i> Periodized strength and conditioning</li>
+                                    <li><i class="fas fa-check"></i> Video analysis and performance review</li>
+                                    <li><i class="fas fa-check"></i> Showcase events and professional exposure</li>
+                                    <li><i class="fas fa-check"></i> College/professional pathway guidance</li>
+                                </ul>
+                            </div>
+
+                            <a href="register.html?program=performance" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Goalkeeper Training -->
+                    <div class="program-item" data-category="specialized" id="goalkeeper">
+                        <div class="program-image">
+                            <img src="images/program-goalkeeper.jpg" alt="Goalkeeper Training">
+                            <span class="age-group">All Ages</span>
+                        </div>
+                        <div class="program-content">
+                            <h3>Goalkeeper Training</h3>
+                            <p class="program-description">Specialized training for goalkeepers of all ages. Our goalkeeper program focuses on the unique technical, tactical, physical, and psychological aspects of the position, delivered by experienced goalkeeper coaches.</p>
+
+                            <div class="program-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <div>
+                                        <h4>Schedule</h4>
+                                        <p>1-2 specialized sessions per week, plus team training</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <h4>Group Size</h4>
+                                        <p>Maximum 6 goalkeepers per coach</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <h4>Focus Areas</h4>
+                                        <p>Handling, positioning, distribution, communication, decision-making</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="program-curriculum">
+                                <h4>Curriculum Highlights</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Catching and handling techniques</li>
+                                    <li><i class="fas fa-check"></i> Diving and shot-stopping</li>
+                                    <li><i class="fas fa-check"></i> Footwork and positioning</li>
+                                    <li><i class="fas fa-check"></i> Distribution (throws and kicks)</li>
+                                    <li><i class="fas fa-check"></i> Crosses and high balls</li>
+                                    <li><i class="fas fa-check"></i> 1v1 situations and breakaways</li>
+                                </ul>
+                            </div>
+
+                            <a href="register.html?program=goalkeeper" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Summer Camps -->
+                    <div class="program-item" data-category="specialized" id="summer">
+                        <div class="program-image">
+                            <img src="images/program-summer.jpg" alt="Summer Camps">
+                            <span class="age-group">All Ages</span>
+                        </div>
+                        <div class="program-content">
+                            <h3>Summer Camps</h3>
+                            <p class="program-description">Intensive week-long training camps during summer break. Our popular summer camps combine technical development, tactical understanding, and fun competitive activities in a high-energy environment.</p>
+
+                            <div class="program-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <div>
+                                        <h4>Schedule</h4>
+                                        <p>Monday-Friday, 9:00 AM - 3:00 PM (Extended care available)</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <h4>Group Size</h4>
+                                        <p>Age-appropriate groups, maximum 16 players per coach</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <h4>Focus Areas</h4>
+                                        <p>Technical skills, small-sided games, tournaments, fun challenges</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="program-curriculum">
+                                <h4>Camp Highlights</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Daily technical training sessions</li>
+                                    <li><i class="fas fa-check"></i> Small-sided games and tournaments</li>
+                                    <li><i class="fas fa-check"></i> Skill challenges and competitions</li>
+                                    <li><i class="fas fa-check"></i> Professional coaching staff</li>
+                                    <li><i class="fas fa-check"></i> Camp t-shirt and water bottle</li>
+                                    <li><i class="fas fa-check"></i> End-of-week awards ceremony</li>
+                                </ul>
+                            </div>
+
+                            <a href="register.html?program=summer" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Individual Training -->
+                    <div class="program-item" data-category="specialized" id="individual">
+                        <div class="program-image">
+                            <img src="images/program-individual.jpg" alt="Individual Training">
+                            <span class="age-group">All Ages</span>
+                        </div>
+                        <div class="program-content">
+                            <h3>Individual Training</h3>
+                            <p class="program-description">Personalized one-on-one or small group training sessions. Our individual training program offers customized coaching focused on specific areas of development based on player needs and goals.</p>
+
+                            <div class="program-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <div>
+                                        <h4>Schedule</h4>
+                                        <p>Flexible scheduling, 60-90 minute sessions</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <h4>Group Size</h4>
+                                        <p>1-3 players per coach</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <h4>Focus Areas</h4>
+                                        <p>Customized training based on individual player assessment and goals</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="program-curriculum">
+                                <h4>Program Benefits</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Personalized development plan</li>
+                                    <li><i class="fas fa-check"></i> Focused attention on specific skills</li>
+                                    <li><i class="fas fa-check"></i> Video analysis and feedback</li>
+                                    <li><i class="fas fa-check"></i> Progress tracking and reporting</li>
+                                    <li><i class="fas fa-check"></i> Flexible scheduling options</li>
+                                    <li><i class="fas fa-check"></i> Elite coaching staff</li>
+                                </ul>
+                            </div>
+
+                            <a href="register.html?program=individual" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Comparison Section -->
+        <section class="program-comparison">
+            <div class="container">
+                <h2 class="section-title">Program Comparison</h2>
+                <p class="section-intro">Compare our core programs to find the right fit for your age and development goals.</p>
+
+                <div class="comparison-table-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Youth Development<br><span class="age-label">Ages 6-12</span></th>
+                                <th>Teen Elite<br><span class="age-label">Ages 13-16</span></th>
+                                <th>Performance Academy<br><span class="age-label">Ages 17-21</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Weekly Sessions</td>
+                                <td>2-3 sessions</td>
+                                <td>3-4 sessions</td>
+                                <td>4-5 sessions</td>
+                            </tr>
+                            <tr>
+                                <td>Session Duration</td>
+                                <td>60-90 minutes</td>
+                                <td>90-120 minutes</td>
+                                <td>90-120 minutes</td>
+                            </tr>
+                            <tr>
+                                <td>Coach-to-Player Ratio</td>
+                                <td>1:12</td>
+                                <td>1:16</td>
+                                <td>1:18</td>
+                            </tr>
+                            <tr>
+                                <td>Video Analysis</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i> Group</td>
+                                <td><i class="fas fa-check"></i> Individual & Group</td>
+                            </tr>
+                            <tr>
+                                <td>Strength & Conditioning</td>
+                                <td><i class="fas fa-check"></i> Basic</td>
+                                <td><i class="fas fa-check"></i> Intermediate</td>
+                                <td><i class="fas fa-check"></i> Advanced</td>
+                            </tr>
+                            <tr>
+                                <td>Competitive Matches</td>
+                                <td><i class="fas fa-check"></i> In-house</td>
+                                <td><i class="fas fa-check"></i> Local/Regional</td>
+                                <td><i class="fas fa-check"></i> Regional/National</td>
+                            </tr>
+                            <tr>
+                                <td>Performance Testing</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i> Quarterly</td>
+                                <td><i class="fas fa-check"></i> Monthly</td>
+                            </tr>
+                            <tr>
+                                <td>Nutrition Guidance</td>
+                                <td><i class="fas fa-check"></i> Basic</td>
+                                <td><i class="fas fa-check"></i> Intermediate</td>
+                                <td><i class="fas fa-check"></i> Personalized</td>
+                            </tr>
+                            <tr>
+                                <td>College/Pro Pathway</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i> Introduction</td>
+                                <td><i class="fas fa-check"></i> Comprehensive</td>
+                            </tr>
+                            <tr>
+                                <td>Monthly Fee</td>
+                                <td>$175-$225</td>
+                                <td>$250-$325</td>
+                                <td>$350-$450</td>
+                            </tr>
+                            <tr class="register-row">
+                                <td></td>
+                                <td><a href="register.html?program=youth" class="btn btn-sm btn-primary">Register</a></td>
+                                <td><a href="register.html?program=teen" class="btn btn-sm btn-primary">Register</a></td>
+                                <td><a href="register.html?program=performance" class="btn btn-sm btn-primary">Register</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="table-note">* Fees may vary based on specific program options and payment plans. Scholarships and financial assistance available for qualifying families.</p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Players Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p>"The Youth Development Program was perfect for my son. The coaches made learning fun while still challenging him to improve. His ball control and confidence have improved tremendously."</p>
+                            <div class="testimonial-author">
+                                <img src="images/parent2.jpg" alt="Sarah Thompson">
+                                <div>
+                                    <h4>Sarah Thompson</h4>
+                                    <p>Parent of Youth Player</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"The Teen Elite Program pushed me to levels I didn't know I could reach. The tactical training and competitive matches really helped me understand the game better. I'm now playing at a much higher level."</p>
+                            <div class="testimonial-author">
+                                <img src="images/player5.jpg" alt="Jason Rodriguez">
+                                <div>
+                                    <h4>Jason Rodriguez</h4>
+                                    <p>Teen Elite Player</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"The Performance Academy prepared me for college soccer in ways I couldn't have imagined. The professional environment, advanced training, and exposure to college coaches were invaluable in securing my scholarship."</p>
+                            <div class="testimonial-author">
+                                <img src="images/player6.jpg" alt="Alicia Chen">
+                                <div>
+                                    <h4>Alicia Chen</h4>
+                                    <p>Performance Academy Graduate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-controls">
+                        <button class="prev-testimonial" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                        <div class="testimonial-indicators">
+                            <span class="indicator active" data-testimonial="0"></span>
+                            <span class="indicator" data-testimonial="1"></span>
+                            <span class="indicator" data-testimonial="2"></span>
+                        </div>
+                        <button class="next-testimonial" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I know which program is right for my child?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We recommend starting with the program that matches your child's age group. However, we also offer free assessment sessions where our coaches can evaluate your child's current skill level and recommend the most appropriate
+                                program. Some players may be placed in programs outside their age group based on their development level.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What equipment does my child need?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Players should come to training with appropriate football boots/cleats, shin guards, water bottle, and weather-appropriate training attire. For matches, players will need the academy uniform kit which can be purchased through
+                                our online store. Goalkeepers should also have appropriate gloves.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Are there tryouts for the programs?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our Youth Development Program is open to all players without tryouts. The Teen Elite and Performance Academy programs do require an assessment/tryout to ensure players are placed in an environment that matches their current
+                                ability level. We hold regular tryout sessions throughout the year, and players can also arrange for individual assessments.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is your make-up session policy?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>If a player misses a session due to illness or other commitments, they can attend a make-up session within the same month, subject to availability. Please contact our administrative team to schedule a make-up session. For weather
+                                cancellations, we automatically reschedule sessions and notify all participants.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer financial assistance?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we have a scholarship program for families who demonstrate financial need. Our goal is to make quality football training accessible to talented and committed players regardless of financial circumstances. Please contact
+                                our administrative office for more information about the application process.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do you handle player evaluations and feedback?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All players receive regular feedback from their coaches during training sessions. Additionally, we conduct formal evaluations quarterly for all programs, which include written assessments and development goals. For Teen Elite
+                                and Performance Academy players, these evaluations also include video analysis and performance metrics. Parents can schedule meetings with coaches to discuss their child's progress.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Join Elite Football Academy?</h2>
+                <p>Take the first step toward developing your football skills and achieving your goals.</p>
+                <div class="cta-buttons">
+                    <a href="register.html" class="btn btn-primary">Register Now</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo.png" alt="Elite Football Academy Logo" class="footer-logo">
+                    <h3>Elite Football Academy</h3>
+                    <p>Developing champions on and off the field since 2005. Our mission is to provide world-class football training while fostering character, discipline, and teamwork.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="coaches.html">Coaches</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="programs.html#youth">Youth Development</a></li>
+                        <li><a href="programs.html#teen">Teen Elite</a></li>
+                        <li><a href="programs.html#performance">Performance Academy</a></li>
+                        <li><a href="programs.html#goalkeeper">Goalkeeper Training</a></li>
+                        <li><a href="programs.html#summer">Summer Camps</a></li>
+                        <li><a href="programs.html#individual">Individual Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Stadium Road, Sportsville, SP 12345</p>
+                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@elitefootballacademy.com">info@elitefootballacademy.com</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Elite Football Academy. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Program Filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const programItems = document.querySelectorAll('.program-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Get filter value
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // Show/hide program items based on filter
+                    programItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'grid';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const toggle = item.querySelector('.faq-toggle');
+
+                // Initially hide all answers
+                answer.style.display = 'none';
+
+                question.addEventListener('click', function() {
+                    // Toggle the current answer
+                    if (answer.style.display === 'none') {
+                        answer.style.display = 'block';
+                        toggle.innerHTML = '<i class="fas fa-minus"></i>';
+                        answer.style.display = 'block';
+                        toggle.innerHTML = '<i class="fas fa-minus"></i>';
+                        item.classList.add('active');
+                    } else {
+                        answer.style.display = 'none';
+                        toggle.innerHTML = '<i class="fas fa-plus"></i>';
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
